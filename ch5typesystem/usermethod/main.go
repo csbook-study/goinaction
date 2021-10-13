@@ -20,7 +20,8 @@ func (u *user) notify() {
 }
 
 // changeEmail implements a method with a pointer receiver.
-func (u user) changeEmail(email string) {
+// 指针接收可以修改，值接收不能修改
+func (u *user) changeEmail(email string) {
 	u.email = email
 }
 
